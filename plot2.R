@@ -16,6 +16,7 @@ plot2 <- function(file) {
   pwcData <- mutate(pwcData, DateTime=dmy_hms(paste(rawData$Date,rawData$Time)))
 
   # plot Global Active Power histogram x=Day and y=count
+  par(mfrow=c(1,1))
   plot(pwcData$DateTime,pwcData$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
   
    # generate PNG and save it as plot2.png 
